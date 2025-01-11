@@ -1,0 +1,96 @@
+/* General Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* Main Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Flex Container for Horizontal Layout */
+.calculator-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Calculator Box Styles */
+.calculator-box {
+  flex: 1 1 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+/* Heading in Each Box */
+h2 {
+  text-align: center;
+  color: #28a745;
+}
+
+/* Form Group Styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Ensure input fields don't overflow */
+input[type="number"], input[type="button"] {
+  width: 100%;
+  max-width: 100%; /* Ensures it doesn't stretch beyond the container */
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Includes padding and border in width */
+}
+
+/* Button Styles */
+button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box; /* Includes padding and border in width */
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Result Styles */
+.result {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Mobile View: Stack the boxes vertically */
+@media (max-width: 768px) {
+  .calculator-box {
+      flex: 1 1 100%;
+      margin-bottom: 20px;
+  }
+}
