@@ -26,7 +26,7 @@ function calculateSGPA() {
 
     for (let i = 1; i <= subjectsCount; i++) {
         let credit = parseFloat(document.getElementById(`subject${i}`).value);
-        if (isNaN(credit) || credit <= 0) {
+        if (isNaN(credit) || credit < 0) {
             alert("Please enter valid credit points for each subject.");
             return;
         }
