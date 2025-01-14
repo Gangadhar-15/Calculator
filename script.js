@@ -42,12 +42,14 @@ function calculateCGPA() {
     let sem1 = parseFloat(document.getElementById('sem1').value);
     let sem2 = parseFloat(document.getElementById('sem2').value);
     let sem3 = parseFloat(document.getElementById('sem3').value);
+    let sem4 = parseFloat(document.getElementById('sem4').value);
 
-    if (isNaN(sem1) || isNaN(sem2) || isNaN(sem3)) {
+
+    if (isNaN(sem1) || isNaN(sem2) || isNaN(sem3) || isNaN(sem4)) {
         alert("Please enter valid SGPA for each semester.");
         return;
     }
 
-    let cgpa = ((sem1 + sem2 + sem3) * 20) / 60;
+    let cgpa = (sem1 + sem2 + sem3+ sem4)/4;
     document.getElementById('cgpaResult').textContent = `CGPA: ${cgpa.toFixed(2)}`;
 }
